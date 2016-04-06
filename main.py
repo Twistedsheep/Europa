@@ -269,7 +269,7 @@ class Europa(QtGui.QMainWindow):
         self.storeData(BaseData)
 
 
-    # Data storage to and from in-scene node
+    # Data storage to and from the in-scene node
     def storeData(self, data):
         node = self.getNode()
 
@@ -482,6 +482,7 @@ class Europa(QtGui.QMainWindow):
         return materialList        
         
     def colorGroupClicked(self, ExportEntry, mode):
+        color = ExportEntry()
         if mode == 'forward':
             color = ExportEntry.colorGroup.forward
         elif mode == 'back':
